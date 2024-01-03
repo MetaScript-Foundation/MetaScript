@@ -1,4 +1,4 @@
-An egotistical pnarcissistic rogramming language, written in the holy TypeScript.
+An egotistical narcissistic programming language, written in the holy TypeScript.
 
 # Running
 - To run a specific file: `npm run metascript <FILENAME>`
