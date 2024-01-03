@@ -1,0 +1,82 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "metascriptx",
+	"patterns": [
+		{
+			"include": "#tests"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#booleans"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#varname"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.metascriptx",
+					"match": "\\b(if|else|for|metascript)\\b"
+				}
+			]
+		},
+		"tests": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": ">|and|or|<|be|fr|nah"
+				}
+			]
+		},
+		"booleans": {
+			"patterns": [
+				{
+					"name": "constant.language",
+					"match": "\\b(nocap|cap)\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b([+-]?([0-9]*[.])?[0-9]+)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.metascriptx",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.metascriptx",
+					"match": "\\\\."
+				}
+			]
+		},
+		"varname": {
+			"patterns": [
+				{
+					"name": "invalid.illegal",
+					"match": "^(?!(this|mf)).*;$"
+				},
+				{
+					"name": "storage.type",
+					"match": "function|this|mf|fuck_around|find_out"
+				}
+			]
+		}
+	},
+	"scopeName": "source.msx"
+}

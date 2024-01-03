@@ -1,0 +1,82 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "metascript",
+	"patterns": [
+		{
+			"include": "#tests"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#booleans"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#varname"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.metascript",
+					"match": "\\b(if|else|for|fn)\\b"
+				}
+			]
+		},
+		"tests": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "<|&&|\\||="
+				}
+			]
+		},
+		"booleans": {
+			"patterns": [
+				{
+					"name": "constant.language",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b([+-]?([0-9]*[.])?[0-9]+)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.metascript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.metascript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"varname": {
+			"patterns": [
+				{
+					"name": "invalid.illegal",
+					"match": "^(?!(let|const)).*;$"
+				},
+				{
+					"name": "storage.type",
+					"match": "fn|let|const|try|catch"
+				}
+			]
+		}
+	},
+	"scopeName": "source.msraw"
+}

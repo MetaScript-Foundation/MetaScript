@@ -1,0 +1,50 @@
+{
+	"name": "metascript-language",
+	"displayName": "MetaScript",
+	"description": "MetaScript programming lnaguage",
+	"version": "0.0.1",
+	"publisher": "face-hh",
+	"engines": {
+		"vscode": "^1.84.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "MetaScript",
+				"aliases": [
+					"MetaScript",
+					"MetaScript"
+				],
+				"extensions": [
+					".msraw", ".rawdog"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "MetaScript X",
+				"aliases": [
+					"MetaScript X"
+				],
+				"extensions": [
+					".msx", ".cum", ".metascript"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "MetaScript X",
+				"scopeName": "source.msx",
+				"path": "./syntaxes/msx.tmLanguage.json"
+			},
+			{
+				"language": "MetaScript RAW",
+				"scopeName": "source.msraw",
+				"path": "./syntaxes/msraw.tmLanguage.json"
+			}
+		]
+	}
+}
