@@ -3,7 +3,7 @@
 	"displayName": "MetaScript",
 	"description": "MetaScript programming lnaguage",
 	"version": "0.0.1",
-	"publisher": "face-hh",
+	"publisher": "ms-foundation",
 	"engines": {
 		"vscode": "^1.84.0"
 	},
